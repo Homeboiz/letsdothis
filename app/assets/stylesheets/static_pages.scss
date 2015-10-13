@@ -4,5 +4,42 @@
 h1 {
 	color: green;
 	font-weight: bold;
-	text-allignment: center;
+	text-align: center;
+}
+
+h3 {
+	text-align: center;
+	font-weight: lighter;
+	opacity: 0.6;
+}
+
+.nav {
+	margin-left: 50px;
+	font-weight: bold;
+
+}
+
+#logo {
+	color: black;
+	font-weight: bold;
+}
+
+.navbar {
+	background-color: #f5f2ea;
+	opacity: 0.95;
+
+}
+
+body {
+	padding-top: 70px;
+}
+
+footer {
+	background-color: #f5f2ea;;
+	color: black;
+	position: fixed;
+	bottom: 0px;
+	height: 20px;
+	width: 100%;
+	opacity: 0.8;
 }
