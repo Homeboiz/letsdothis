@@ -30,6 +30,8 @@ h3 {
 
 }
 
+
+
 body {
 	padding-top: 70px;
 }
@@ -47,3 +49,26 @@ footer {
 #bikeimage {
 	margin-left: 200px;
 }
+
+.products {
+	margin-top: 150px;
+	margin-left: 550px;
+}
+
+.items td {
+	padding: 10px;
+}
+
+.items th {
+	padding: 10px;
+}
+
+.product-button {
+	background-color: gray;
+	color: white;
+	}
+
+.products {
+	display: inline-block;
+}
+
