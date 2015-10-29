@@ -22,15 +22,17 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" id="logo" href="#">Best Bikes</a>
+      <%= link_to "Best Bikes", static_pages_index_path, :class =>"navbar-brand", :id =>"logo" %>
+      
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Home <span class="sr-only">(current)</span></a></li>
-        <li><a href="#">Contact</a></li>
-        <li><a href="#">About</a></li>
+        <li class="active"><%=link_to "Home", static_pages_landing_page_path %> <span class="sr-only">(current)</span></li>
+        <li><%=link_to "Contact", static_pages_contact_path %></li>
+        <li><%=link_to "About", static_pages_about_path %></li>
+        <li><%=link_to "Products", products_path %></li>
         
       </ul>
       
