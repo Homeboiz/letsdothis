@@ -2,14 +2,19 @@ Rails.application.routes.draw do
   
 
   resources :products
-  get 'static_pages/about'
+  match 'static_pages/about', via: [:get], to: 'static_pages#about',
+  as: 'about'
 
   get 'static_pages/landing_page'
 
-  get 'static_pages/contact'
+  
 
   get 'static_pages/index'
 
+  match '/static_pages/contact', to: 'static_pages#contact', via: [:get],
+  as: 'contact'
+
+  post 'static_pages/thank_you'  
 
 
   resources :orders, only: [:index, :show, :new, :create]

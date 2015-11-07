@@ -80,3 +80,23 @@ footer {
 .container-fluid {
 	width: 75%;
 }
+
+
+.form {
+	display: inline-block;
+	position: relative;
+	float: right;
+	top: 13px;
+	left: 20px;
+
+}
+
+.input-form {
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 75px;
+}
+
+.search-label-tag {
+	margin-top: 6px;
+}
