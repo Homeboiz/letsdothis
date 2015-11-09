@@ -20,8 +20,7 @@ class StaticPagesController < ApplicationController
   	ActionMailer::Base.mail(:from => @email,
   		:to => 'fabianwahlers@hotmail.de',
   		:subject => "A new contact message from #{@name}",
-  		:body => @message)
-      UserMailer.contact_form(@email, @name, @message).deliver_now
+  		:body => @message).deliver_now
   end
 
 end
