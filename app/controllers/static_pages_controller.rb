@@ -5,6 +5,7 @@ class StaticPagesController < ApplicationController
   def landing_page 
   @featured_product = Product.first
   @products = Product.limit(3)
+  @indicators = Product.all
   end
 
   def contact
