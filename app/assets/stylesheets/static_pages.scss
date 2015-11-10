@@ -77,8 +77,9 @@ footer {
 	border-bottom: 2px solid black;
 }
 
-.container-fluid {
-	width: 75%;
+
+.navigation {
+	width: 100%;
 }
 
 
@@ -99,4 +100,9 @@ footer {
 
 .search-label-tag {
 	margin-top: 6px;
+}
+
+.log-buttons {
+	display: inline-block;
+	float: left;
 }

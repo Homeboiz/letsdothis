@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151107175811) do
+ActiveRecord::Schema.define(version: 20151110122201) do
 
   create_table "orders", force: :cascade do |t|
     t.integer "user_id"
@@ -47,6 +47,7 @@ ActiveRecord::Schema.define(version: 20151107175811) do
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
+    t.string   "username"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true

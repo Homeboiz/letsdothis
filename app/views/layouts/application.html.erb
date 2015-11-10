@@ -13,7 +13,7 @@
 </head>
 <body>
 <nav class="navbar navbar-default navbar-fixed-top">
-  <div class="container-fluid">
+  <div class="container-fluid navigation">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -35,6 +35,23 @@
         <li><%=link_to "Products", products_path %></li>
         
         
+      </ul>
+      <ul class="nav pull-right">
+        <li>
+          <% if user_signed_in? %>
+          Logged in as <strong><%= current_user.email %></strong>
+          
+
+
+            
+           <%= link_to('Edit Profile', edit_user_registration_path, class: "log-buttons") %>
+            <%= link_to('Logout', destroy_user_session_path, :method => :delete, class: "log-buttons") %>
+
+            <% else %>
+            <%= link_to('Sign up', new_user_registration_path, class: "log-buttons") %> 
+            <%= link_to('Sign In', user_session_path, class: "log-buttons") %>
+            <% end %>
+        </li>
       </ul>
 
 
