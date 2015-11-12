@@ -66,6 +66,7 @@ footer {
 .product-button {
 	background-color: gray;
 	color: white;
+	margin-bottom: 30px;
 	}
 
 .products {
@@ -105,4 +106,15 @@ footer {
 .log-buttons {
 	display: inline-block;
 	float: left;
+}
+
+.product-display {
+	position: absolute;
+	left: 25%;
+
+	
+}
+
+.products-index {
+	margin-left: 33%;
 }
