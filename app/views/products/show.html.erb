@@ -1,7 +1,7 @@
 
 
 <p id="notice"><%= notice %></p>
-
+<%= alert %>
 
 <div class="row">
   <div class="col-sm-12 col-md-6 product-display">
@@ -30,6 +30,7 @@
         <br>
         <%= render 'comments/new_comment' %>
         <%= render 'comments/show_comments' %>
+        <%= will_paginate @comments, renderer: BootstrapPagination::Rails,  previous_label: "Older", next_label: "Newer" %>
       </div>
     </div>
   </div>

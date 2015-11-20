@@ -2,6 +2,7 @@ class Product < ActiveRecord::Base
 	has_many :orders
 	has_many :comments
 	validates :description, length: { maximum: 20 }
+	validates :name, presence: true 
 
 
 	def average_rating 
