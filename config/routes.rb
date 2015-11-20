@@ -7,8 +7,9 @@ Rails.application.routes.draw do
   resources :products do 
     resources :comments 
   end 
-  resources :users
   
+  
+  resources :users
   
   
   match 'static_pages/about', via: [:get], to: 'static_pages#about',
