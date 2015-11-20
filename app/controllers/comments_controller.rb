@@ -2,8 +2,8 @@ class CommentsController < ApplicationController
 
 
 	def create
-		@product = Product.find(params[:id])
-		@comment = @prdouct.comments.new(comment_params)
+		@product = Product.find(params[:product_id])
+		@comment = @product.comments.new(comment_params)
 		@comment.user = current_user 
 		@comment.save
 		redirect_to(@product)

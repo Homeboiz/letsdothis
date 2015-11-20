@@ -20,10 +20,16 @@
           <strong>Price:</strong>
           <%= @product.price %>
         </p>
-        
+        <br>
+        <p><strong>Average Rating:</strong><div class="rated" data-score="<%= @product.average_rating %>"></div></p>
+        <br>
         <p><a href="#" class="btn btn-primary" role="button">Buy Now</a> </p>
         <%= link_to 'Edit', edit_product_path(@product) %> |
         <%= link_to 'Back', products_path %>
+        <br>
+        <br>
+        <%= render 'comments/new_comment' %>
+        <%= render 'comments/show_comments' %>
       </div>
     </div>
   </div>
