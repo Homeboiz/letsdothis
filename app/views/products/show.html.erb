@@ -18,7 +18,7 @@
 
         <p>
           <strong>Price:</strong>
-          <%= @product.price %>
+          <%= (@product.price)/100 %>
         </p>
         <br>
         <p><strong>Average Rating:</strong><div class="rated" data-score="<%= @product.average_rating %>"></div></p>

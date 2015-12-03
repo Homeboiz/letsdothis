@@ -4,6 +4,8 @@ RSpec.describe UsersController, type: :controller do
 
 	before do
 		@user = User.create(:email => "ass1@hotmail.de", :password => "12345678", :username => "Fucker")
+		@secondUser = User.create(:email => "ass2@hotmail.de", :password => "12345678", :username => "StraffeGiraffe")
+		
 	end 
 
 	describe "GET#show" do 
@@ -18,7 +20,18 @@ RSpec.describe UsersController, type: :controller do
 				expect(response).to have_http_status(200)
 				expect(assigns(:user)).to eq @user
 			end
+		end 
 
+		context "User tries to access show page of User1" do
+			before do
+				sign_in @user
+			end
+			it "redirects to index" do
+				get :show, id: @secondUser.id 
+				# expect(response).should_not be_success 
+				expect(response).to have_http_status(403)
+				expect(responde).to redirect_to(root_path)
+			end 
 
 		end
 
@@ -28,6 +41,11 @@ RSpec.describe UsersController, type: :controller do
 				expect(response).to redirect_to(root_path)
 			end 
 		end 	
+
+
+
+	
+
 
 
 
