@@ -2,6 +2,8 @@ Rails.application.routes.draw do
   
 
   
+  get 'payments/create'
+
   devise_for :users, path_names: {sign_in: "login", sign_out: "Logout"}
   
   resources :products do 
@@ -17,6 +19,7 @@ Rails.application.routes.draw do
 
   get 'static_pages/landing_page'
 
+  post 'payments/create'
   
 
   get 'static_pages/index'

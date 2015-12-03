@@ -1,5 +1,8 @@
 source 'https://rubygems.org'
 
+group :development, :test do
+  gem 'rspec-rails', '~> 3.0'
+end
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.4'
@@ -30,6 +33,11 @@ gem 'cancancan'
 gem 'will_paginate'
 
 gem 'will_paginate-bootstrap'
+
+gem 'stripe'
+
+gem "factory_girl_rails", "~> 4.0"
+
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
