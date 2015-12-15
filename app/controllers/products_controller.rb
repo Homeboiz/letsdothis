@@ -35,6 +35,7 @@ class ProductsController < ApplicationController
 
     respond_to do |format|
       if @product.save
+        expire_fragment("my_products/10d1b304caeae7a7b47becc2f2520052")
         format.html { redirect_to "/static_pages/landing_page", notice: 'Product was successfully created.' }
         format.json { render :show, status: :created, location: @product }
       else
@@ -49,6 +50,7 @@ class ProductsController < ApplicationController
   def update
     respond_to do |format|
       if @product.update(product_params)
+        
         format.html { redirect_to @product, notice: 'Product was successfully updated.' }
         format.json { render :show, status: :ok, location: @product }
       else
@@ -62,10 +64,14 @@ class ProductsController < ApplicationController
   # DELETE /products/1.json
   def destroy
     @product.destroy
+
     respond_to do |format|
       format.html { redirect_to products_url, notice: 'Product was successfully destroyed.' }
       format.json { head :no_content }
+
     end
+
+
   end
 
 

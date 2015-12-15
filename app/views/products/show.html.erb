@@ -18,12 +18,14 @@
 
         <p>
           <strong>Price:</strong>
-          <%= (@product.price)/100 %>
+          <%= @product.price %>
         </p>
         <br>
         <p><strong>Average Rating:</strong><div class="rated" data-score="<%= @product.average_rating %>"></div></p>
         <br>
         <%= form_tag "/payments/create" do %>
+        <%= hidden_field_tag(:product_id, @product.id) %>
+
         <%= render partial: "shared/stripe_checkout_button" %>
         <% end %> 
         <%= link_to 'Edit', edit_product_path(@product) %> |

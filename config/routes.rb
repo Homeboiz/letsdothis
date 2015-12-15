@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   
 
   
-  get 'payments/create'
+  
 
   devise_for :users, path_names: {sign_in: "login", sign_out: "Logout"}
   
