@@ -10,7 +10,8 @@ Rails.application.routes.draw do
     resources :comments 
   end 
   
-  
+  resources :orders, only: [:index, :show, :create, :destroy]
+
   resources :users
   
   

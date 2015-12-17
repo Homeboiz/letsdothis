@@ -40,6 +40,8 @@ gem 'factory_girl_rails', '~> 4.0'
 
 gem 'dalli'
 
+gem 'angularjs-rails'
+
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
@@ -63,9 +65,15 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
 
-   gem 'guard'
 
+ 
    gem 'guard-rspec', require: false
+  
+  gem 'spork-rails'
+
+
+
+  
    
 end
 
